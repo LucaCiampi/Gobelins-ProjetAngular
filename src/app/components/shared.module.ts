@@ -7,13 +7,15 @@ import {ImageComponent} from "./image/image.component";
 import {ImageViewComponent} from "./image-view/image-view.component";
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ImageLikeButtonComponent } from './image/image-like-button/image-like-button.component';
 
 @NgModule({
   declarations: [
     ImageViewComponent,
     ImageComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ImageLikeButtonComponent
   ],
   imports: [
     CommonModule,

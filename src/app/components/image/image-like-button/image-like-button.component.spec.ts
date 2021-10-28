@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LikeButtonComponent } from './like-button.component';
+import { ImageLikeButtonComponent } from './image-like-button.component';
 
-describe('LikeButtonComponent', () => {
-  let component: LikeButtonComponent;
-  let fixture: ComponentFixture<LikeButtonComponent>;
+describe('ImageLikeButtonComponent', () => {
+  let component: ImageLikeButtonComponent;
+  let fixture: ComponentFixture<ImageLikeButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LikeButtonComponent ]
+      declarations: [ ImageLikeButtonComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LikeButtonComponent);
+    fixture = TestBed.createComponent(ImageLikeButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
