@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ImageModel} from "../../models/image.model";
+import * as faker from "faker";
 
 @Component({
   selector: 'app-image-view',
@@ -7,7 +9,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImageViewComponent implements OnInit {
 
-  constructor() { }
+  imageList: ImageModel[];
+
+  constructor() {
+    this.imageList = [
+      new ImageModel({
+        imageUrl: faker.image.imageUrl(140, 140, undefined, true, true),
+        title: faker.name.firstName(),
+        text: faker.lorem.sentence(12)
+      }),
+      new ImageModel({
+        imageUrl: faker.image.imageUrl(140, 140, undefined, true, true),
+        title: faker.name.firstName(),
+        text: faker.lorem.sentence(12)
+      }),
+      new ImageModel({
+        imageUrl: faker.image.imageUrl(140, 140, undefined, true, true),
+        title: faker.name.firstName(),
+        text: faker.lorem.sentence(12)
+      }),
+      new ImageModel({
+        imageUrl: faker.image.imageUrl(140, 140, undefined, true, true),
+        title: faker.name.firstName(),
+        text: faker.lorem.sentence(12)
+      }),
+      new ImageModel({
+        imageUrl: faker.image.imageUrl(140, 140, undefined, true, true),
+        title: faker.name.firstName(),
+        text: faker.lorem.sentence(12)
+      }),
+      new ImageModel({
+        imageUrl: faker.image.imageUrl(140, 140, undefined, true, true),
+        title: faker.name.firstName(),
+        text: faker.lorem.sentence(12)
+      })
+    ]
+  }
 
   ngOnInit(): void {
   }

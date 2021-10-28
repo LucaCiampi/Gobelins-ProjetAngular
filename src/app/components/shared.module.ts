@@ -3,11 +3,12 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {RouterModule} from "@angular/router";
-import {ImageComponent} from "./image/image.component";
+import {ImageComponent} from "./image-view/image/image.component";
 import {ImageViewComponent} from "./image-view/image-view.component";
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ImageLikeButtonComponent } from './image/image-like-button/image-like-button.component';
+import { ImageLikeButtonComponent } from './image-view/image/image-like-button/image-like-button.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ImageLikeButtonComponent } from './image/image-like-button/image-like-b
     ImageComponent,
     HeaderComponent,
     FooterComponent,
-    ImageLikeButtonComponent
+    ImageLikeButtonComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +29,8 @@ import { ImageLikeButtonComponent } from './image/image-like-button/image-like-b
     ImageViewComponent,
     ImageComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ContactComponent
   ]
 })
 export class SharedModule {

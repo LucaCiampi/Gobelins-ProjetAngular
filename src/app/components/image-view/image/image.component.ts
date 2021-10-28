@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ImageModel} from "../../../models/image.model";
+import * as faker from "faker";
+import {ImageLikeButtonModel} from "../../../models/image-like-button.model";
 
 @Component({
   selector: 'app-image',

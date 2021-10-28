@@ -1,1 +1,30 @@
-<p>image-view works!</p>
+<section class="section bg-light imageView">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-12">
+        <i class="ti-user title-icon text-muted"></i>
+        <h3 class="title">Our <span class="fw-bold">Images</span></h3>
+        <p class="text-muted mt-3 title-subtitle mx-auto">It is a long established fact that a reader will
+          be of a page when established fact looking at its layout.</p>
+      </div>
+    </div>
+    <div class="row mt-5">
+
+      <div class="col-lg-4" *ngFor="let image of imageList; let i=index">
+        <div class="text-center bg-white image-box mt-3 p-5" [ngClass]="{'active' : image.isActive === true}">
+          <div class="">
+            <img src="{{image.imageUrl}}" alt="{{image.title}}"
+                 class="img-fluid rounded-circle mx-auto d-block">
+          </div>
+          <div class="image-name">
+            <p class="fw-bold mb-0 mt-4">{{image.title}}</p>
+            <p class="text-muted mt-4">{{image.text}}</p>
+          </div>
+          <!-- image like button-->
+          <!-- <app-external-links *ngIf="toggleSocialLinks" [links]="image.links"></app-external-links>-->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
