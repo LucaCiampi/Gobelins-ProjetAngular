@@ -1,0 +1,9 @@
+.navbar {
+  height: 60px;
+  background: #1976d2;
+}
+
+.nav-link {
+  color: #ffffff;
+  cursor: pointer;
+}
