@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {ImageLikeButtonModel} from "../../../../models/image-like-button.model";
 
 @Component({
   selector: 'app-image-like-button',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImageLikeButtonComponent implements OnInit {
 
-  constructor() { }
+  // @Input() button: ImageLikeButtonModel
+  amount: number;
+  maxLikes = 30;
+  isDisabled = false;
+
+  constructor() {
+    this.amount = Math.floor(Math.random() * (this.maxLikes + 1));
+  }
 
   ngOnInit(): void {
+  }
+
+  addLike(): void {
+    this.isDisabled = true;
+    this.amount += 1;
   }
 
 }

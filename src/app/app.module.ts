@@ -17,9 +17,12 @@ import {SharedModule} from "./components/shared.module";
     BrowserAnimationsModule,
     PagesModule,
     SharedModule
+    // MatIconModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule {
 }

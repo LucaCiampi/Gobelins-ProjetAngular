@@ -8,9 +8,9 @@
           be of a page when established fact looking at its layout.</p>
       </div>
     </div>
-    <div class="row mt-5">
+    <div class="row">
 
-      <div class="col-lg-4" *ngFor="let image of imageList; let i=index">
+      <div class="col-lg-4 imagesListDiv" *ngFor="let image of imageList; let i=index">
         <div class="text-center bg-white image-box mt-3 p-5" [ngClass]="{'active' : image.isActive === true}">
           <div class="">
             <img src="{{image.imageUrl}}" alt="{{image.title}}"
@@ -18,10 +18,11 @@
           </div>
           <div class="image-name">
             <p class="fw-bold mb-0 mt-4">{{image.title}}</p>
-            <p class="text-muted mt-4">{{image.text}}</p>
+            <p class="text-muted mt-4">{{image.text | wordsTruncature:70}}</p>
           </div>
           <!-- image like button-->
-          <!-- <app-external-links *ngIf="toggleSocialLinks" [links]="image.links"></app-external-links>-->
+           <app-image-like-button></app-image-like-button>
+          <div>coucou</div>
         </div>
       </div>
 

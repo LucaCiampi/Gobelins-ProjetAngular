@@ -1,1 +1,6 @@
-<p>image-like-button works!</p>
+<div class="likeButtonContainer">
+  <button [disabled]="isDisabled" (click)="addLike()" mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <div class="likeButtonAmount">{{amount}}</div>
+</div>

@@ -1,4 +1,8 @@
 .content {
-  min-height: 80vh;
+  min-height: 90vh;
+  padding-top: 100px;
 }
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

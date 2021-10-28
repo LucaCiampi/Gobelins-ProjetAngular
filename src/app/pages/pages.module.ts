@@ -17,7 +17,7 @@ import {SharedModule} from "../components/shared.module";
   imports: [
     CommonModule,
     PagesRoutingModule,
-    SharedModule,
+    SharedModule
   ]
 })
 export class PagesModule {
