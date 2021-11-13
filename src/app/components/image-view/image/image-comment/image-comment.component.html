@@ -1,7 +1,7 @@
 <div>
   <h2>Comments ({{amount}})</h2>
   <div class="input-group mb-3">
-    <input class="comment-input" (keyup.enter)="createComment($event)" type="text" class="form-control form-control-sm"
+    <input class="comment-input form-control form-control-sm" (keyup.enter)="createComment($event)" type="text"
       placeholder="Leave a comment…" aria-label="Leave a comment…" />
   </div>
   <div #comments class="comments m-2">
