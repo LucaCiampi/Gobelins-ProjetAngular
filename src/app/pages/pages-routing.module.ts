@@ -14,7 +14,7 @@ const routes: Routes = [
     component: ImagesPageComponent
   },
   {
-    path: 'form-page', // Correspond à http://localhost:4200/form-page
+    path: 'contact-page', // Correspond à http://localhost:4200/contact-page
     component: FormPageComponent
   },
   {
