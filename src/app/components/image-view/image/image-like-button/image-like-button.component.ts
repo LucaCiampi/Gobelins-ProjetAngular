@@ -1,28 +1,37 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {ImageLikeButtonModel} from "../../../../models/image-like-button.model";
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { ImageLikeButtonModel } from '../../../../models/image-like-button.model';
 
 @Component({
   selector: 'app-image-like-button',
   templateUrl: './image-like-button.component.html',
-  styleUrls: ['./image-like-button.component.css']
+  styleUrls: ['./image-like-button.component.css'],
 })
 export class ImageLikeButtonComponent implements OnInit {
-
   // @Input() button: ImageLikeButtonModel
   amount: number;
-  maxLikes = 30;
-  isDisabled = false;
+  maxLikes = 990;
+  isLiked = false;
+  likeIcon = 'favorite_border';
+
+  @ViewChild('likeBtn') likeBtn: any;
 
   constructor() {
     this.amount = Math.floor(Math.random() * (this.maxLikes + 1));
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  addLike(): void {
-    this.isDisabled = true;
-    this.amount += 1;
+  toggleLike(): void {
+    if (!this.isLiked) {
+      this.likeIcon = 'favorite';
+      this.amount += 1;
+      this.likeBtn.color = 'warn';
+    }
+    else {
+      this.likeIcon = 'favorite_border';
+      this.amount -= 1;
+      this.likeBtn.color = 'grey';
+    }
+    this.isLiked = !this.isLiked;
   }
-
 }

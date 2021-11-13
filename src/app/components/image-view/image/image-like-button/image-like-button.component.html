@@ -1,6 +1,9 @@
 <div class="likeButtonContainer">
-  <button [disabled]="isDisabled" (click)="addLike()" mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <div class="likeButtonAmount">{{amount}}</div>
+  <div class="d-flex justify-content-left">
+    <button (click)="toggleLike()" mat-icon-button color="grey"
+      aria-label="Example icon button with a heart icon">
+      <mat-icon #likeBtn>{{likeIcon}}</mat-icon>
+    </button>
+    <div class="likeButtonAmount my-auto">{{ amount }}</div>
+  </div>
 </div>
