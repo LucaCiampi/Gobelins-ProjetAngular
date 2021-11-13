@@ -1,10 +1,24 @@
-.imageView {
-  padding: 20px;
-  margin: 20px;
-  border-radius: 20px;
+.imagesList {
+
 }
 
-.imageView .imagesListDiv {
-  margin-top: 10px;
-  margin-bottom: 20px;
+.imageItem {
+  position: relative;
+  /* margin: 20px; */
+  border-radius: 20px;
+  background-color: #f8c291;
+}
+
+.imageItem__userRow {
+  background: #fa983a;
+}
+
+.imageItem__userRow__userImg {
+  height: 40px;
+  width: 40px;
+}
+
+.imageItem__photo {
+  height: 100%;
+  width: 100%;
 }

@@ -8,17 +8,23 @@
           be of a page when established fact looking at its layout.</p>
       </div>
     </div>
-    <div class="row">
 
-      <div class="col-lg-4 imagesListDiv" *ngFor="let image of imageList; let i=index">
-        <div class="text-center bg-white image-box mt-3 p-5" [ngClass]="{'active' : image.isActive === true}">
+    <div class="row imagesList justify-content-center">
+
+      <div class="col-3 m-2 imageItem" *ngFor="let image of imageList; let i=index">
+        <div class="image-box" [ngClass]="{'active' : image.isActive === true}">
+          <div class="imageItem__userRow d-flex align-items-center p-1">
+            <img src="{{image.imageUrl}}" alt="{{image.title}}"
+                 class="img-fluid rounded-circle d-block imageItem__userRow__userImg">
+                 <div class="imageItem__userRow__name mx-2">@pseudo_ici</div>
+          </div>
           <div class="">
             <img src="{{image.imageUrl}}" alt="{{image.title}}"
-                 class="img-fluid rounded-circle mx-auto d-block">
+                 class="img-fluid mx-auto d-block imageItem__photo">
           </div>
           <div class="image-name">
             <p class="fw-bold mb-0 mt-4">{{image.title}}</p>
-            <p class="text-muted mt-4">{{image.text | wordsTruncature:70}}</p>
+            <p class="mt-1">{{image.text | wordsTruncature:70}}</p>
           </div>
           <!-- image like button-->
            <app-image-like-button></app-image-like-button>
