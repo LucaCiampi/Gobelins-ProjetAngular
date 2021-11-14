@@ -1,7 +1,7 @@
 .comment-input {
     border-top: none;
     border-right: none;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #757575;
     border-left: none;
     background: transparent;
     border-radius: 0;
@@ -12,5 +12,5 @@
 }
 
 .comment-input::placeholder {
-    color: #222;
+    color: #757575;
 }

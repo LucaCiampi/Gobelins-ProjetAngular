@@ -7,7 +7,7 @@
           <div class="imageItem__userRow d-flex align-items-center p-1">
             <img src="{{ image.imageUrl }}" alt="{{ image.title }}"
               class="img-fluid rounded-circle d-block imageItem__userRow__userImg" />
-            <div class="imageItem__userRow__name mx-2">@pseudo_ici</div>
+            <div class="imageItem__userRow__name fw-bold mx-2">@pseudo_ici</div>
           </div>
           <div class="">
             <img src="{{ image.imageUrl }}" alt="{{ image.title }}"
@@ -15,7 +15,7 @@
           </div>
           <div class="image__description p-2">
             <div class="image-name">
-              <p class="fw-bold">{{ image.title }}</p>
+              <p class="fw-bold image-title">{{ image.title }}</p>
               <p class="mt-1">{{ image.text | wordsTruncature: 70 }}</p>
             </div>
             <app-image-like-button></app-image-like-button>

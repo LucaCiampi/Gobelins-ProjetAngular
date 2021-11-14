@@ -11,6 +11,7 @@ export class ContactComponent implements OnInit {
   contactForm: FormGroup;
   static readonly EMAIL = /^.+\@\S+\.\S+$/;
   submitted: boolean = false;
+  formErrors: boolean = false;
 
   constructor() {
     this.contactForm = new FormGroup({
@@ -31,10 +32,12 @@ export class ContactComponent implements OnInit {
   submitForm(): void {
     if (this.contactForm.invalid)
     {
+      this.formErrors = true;
       return;
     }
 
     this.submitted = true;
+    this.formErrors = false;
     this.contactForm.reset();
   }
 

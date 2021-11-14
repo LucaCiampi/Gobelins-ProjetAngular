@@ -9,11 +9,12 @@
 
 .image-box {
   border-radius: 20px;
-  background-color: #f8c291;
+  background-color: #D7CCC8;
+  color: #212121;
 }
 
 .imageItem__userRow {
-  background: #fa983a;
+  background: #795548;
 }
 
 .imageItem__userRow__userImg {
@@ -21,7 +22,15 @@
   width: 40px;
 }
 
+.imageItem__userRow__name {
+  color: #FFFFFF;
+}
+
 .imageItem__photo {
   height: 100%;
   width: 100%;
+}
+
+.image-title {
+  color: #212121;
 }

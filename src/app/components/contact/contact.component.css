@@ -12,3 +12,8 @@
 .subtitle {
   margin-top: 2em;
 }
+
+.submitBtn {
+  background-color: #FF9800;
+  border: #FF9800;
+}
