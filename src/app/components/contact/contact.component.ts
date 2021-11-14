@@ -29,8 +29,6 @@ export class ContactComponent implements OnInit {
    * @return void
    */
   submitForm(): void {
-    console.log(this.contactForm);
-
     if (this.contactForm.invalid)
     {
       return;

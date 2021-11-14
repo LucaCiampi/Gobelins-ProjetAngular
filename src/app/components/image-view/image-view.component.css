@@ -5,6 +5,9 @@
 .imageItem {
   position: relative;
   /* margin: 20px; */
+}
+
+.image-box {
   border-radius: 20px;
   background-color: #f8c291;
 }

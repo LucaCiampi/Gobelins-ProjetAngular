@@ -1,8 +1,16 @@
-.content {
-  min-height: 90vh;
-  padding-top: 100px;
+@font-face {
+  font-family: "Puppies Play";
+  src: url("./assets/fonts/PuppiesPlay-Regular.ttf");
 }
-
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.content {
+  min-height: 90vh;
+}
+
+.content .title {
+  font-family: 'Puppies Play';
+  font-size: 7em;
+}
