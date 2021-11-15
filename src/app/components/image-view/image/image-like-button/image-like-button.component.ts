@@ -12,7 +12,7 @@ export class ImageLikeButtonComponent implements OnInit {
   maxLikes = 990;
   isLiked = false;
   likeIcon = 'favorite_border';
-
+  // @Input() likes:ImageLikeButtonModel;
   @ViewChild('likeBtn') likeBtn: any;
 
   constructor() {
