@@ -27,11 +27,18 @@ export class ImageCommentComponent implements OnInit {
 
   public createComment(event: any): void {
     if (event.target.value === '') return;
+
     let newComment = document.createElement('div');
-    newComment.innerHTML = '<div class="my-1">' + event.target.value + '</div>';
+    let currentDate = new Date();
+    newComment.innerHTML = '<div><span style="color: #f44336" class="image-comment-username">@CorentinWorkshop</span> ' + this.formatDate(currentDate) + '</div><div>' + event.target.value+ '</div>';
     this.commentsTag.nativeElement.appendChild(newComment);
+
     this.commentCreated = true;
     this.amount += 1;
     event.target.value = '';
+  }
+
+  public formatDate(dateToFormat: Date): string {
+    return '(' + dateToFormat.toDateString() + ')'
   }
 }
