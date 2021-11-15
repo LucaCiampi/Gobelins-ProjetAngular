@@ -5,9 +5,9 @@
       <div class="col-4 p-3 imageItem" *ngFor="let image of imageList; let i = index">
         <div class="image-box" [ngClass]="{ active: image.isActive === true }">
           <div class="imageItem__userRow d-flex align-items-center p-1">
-            <img src="{{ image.imageUrl }}" alt="{{ image.title }}"
+            <img src="{{ image.profilePhotoUrl }}" alt="{{ image.title }}"
               class="img-fluid rounded-circle d-block imageItem__userRow__userImg" />
-            <div class="imageItem__userRow__name fw-bold mx-2">@pseudo_ici</div>
+            <div class="imageItem__userRow__name fw-bold mx-2">@{{ image.username }}</div>
           </div>
           <div class="">
             <img src="{{ image.imageUrl }}" alt="{{ image.title }}"
