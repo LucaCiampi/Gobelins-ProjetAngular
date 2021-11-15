@@ -10,11 +10,12 @@ export class ImageLikeButtonComponent implements OnInit {
   @Input() likes!: ImageLikeButtonModel;
   @ViewChild('likeBtn') likeBtn!: ElementRef;
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
     if (true === this.likes.isLiked) {
       this.likes.icon = 'favorite';
+      this.likes.color = 'warn';
     }
   }
 
@@ -23,13 +24,13 @@ export class ImageLikeButtonComponent implements OnInit {
       console.log(this.likeBtn)
       this.likes.icon = 'favorite';
       this.likes.count += 1;
-      // this.likes.icon.color = 'warn';
+      this.likes.color = 'warn';
     }
     else {
       console.log(this.likeBtn.nativeElement)
       this.likes.icon = 'favorite_border';
       this.likes.count -= 1;
-      // this.likes.icon.color = 'grey';
+      this.likes.color = 'grey';
     }
     this.likes.isLiked = !this.likes.isLiked;
   }
