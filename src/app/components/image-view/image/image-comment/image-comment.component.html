@@ -1,0 +1,11 @@
+<div>
+  <h2 class="image-comments-title">Comments ({{amount}})</h2>
+  <div class="input-group mb-3">
+    <input class="comment-input form-control form-control-sm" (keyup.enter)="createComment($event)" type="text"
+      placeholder="Leave a comment…" aria-label="Leave a comment…" />
+  </div>
+  <div #commentsTag class="comments m-2">
+      <div><span class="image-comment-username">{{ comments.username }}</span> {{ dateToString }}</div>
+        <div>{{ comments.text }}</div>
+  </div>
+</div>

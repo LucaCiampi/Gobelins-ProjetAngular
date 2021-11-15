@@ -1,0 +1,9 @@
+<div class="likeButtonContainer">
+  <div class="d-flex justify-content-left">
+    <button (click)="toggleLike()" mat-icon-button color="{{ likes.color }}"
+      aria-label="Example icon button with a heart icon">
+      <mat-icon #likeBtn>{{ likes.icon }}</mat-icon>
+    </button>
+    <div class="likeButtonAmount my-auto">{{ likes.count }}</div>
+  </div>
+</div>

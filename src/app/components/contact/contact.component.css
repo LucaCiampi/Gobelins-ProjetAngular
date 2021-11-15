@@ -1,0 +1,19 @@
+.contactSection {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.contactSection button {
+  margin-top: 20px;
+}
+
+.subtitle {
+  margin-top: 2em;
+}
+
+.submitBtn {
+  background-color: #FF9800;
+  border: #FF9800;
+}
