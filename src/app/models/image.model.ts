@@ -10,7 +10,7 @@ export class ImageModel implements Model{
   readonly text: string;
   readonly isActive?: boolean;
   readonly likeButton: ImageLikeButtonModel;
-  //readonly comments: ImageCommentModel;
+  readonly comments: ImageCommentModel;
 
   constructor(input: Partial<ImageModel>) {
     this.imageUrl = input.imageUrl || '';
@@ -20,6 +20,6 @@ export class ImageModel implements Model{
     this.text = input.text || '';
     this.isActive = input.isActive || false;
     this.likeButton = new ImageLikeButtonModel(input.likeButton || {});
-    //this.comments = new ImageCommentModel(input.comments || {});
+    this.comments = new ImageCommentModel(input.comments || {});
   }
 }

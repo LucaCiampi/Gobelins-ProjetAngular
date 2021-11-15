@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { ImageCommentModel } from 'src/app/models/image-comment.model';
 
 @Component({
   selector: 'app-image-comment',
@@ -6,12 +7,23 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./image-comment.component.css'],
 })
 export class ImageCommentComponent implements OnInit {
-  public commentCreated = false;
+  @Input() comments!: ImageCommentModel;
+  @ViewChild('commentsTag') commentsTag: any;
+  
   public amount = 0;
-
-  @ViewChild('comments') commentsTag: any;
+  public dateToString = '';
+  public commentCreated = false;
 
   constructor() {}
+
+  ngOnInit(): void {
+    console.log(this.comments);
+    // this.amount = Object.keys(this.comments).length;
+    if ('' != this.comments.text) {
+      this.amount = 1;
+    } 
+    if (this.comments.datePosted) this.dateToString = '(' + this.comments.datePosted.toDateString() + ')';
+  }
 
   public createComment(event: any): void {
     if (event.target.value === '') return;
@@ -22,6 +34,4 @@ export class ImageCommentComponent implements OnInit {
     this.amount += 1;
     event.target.value = '';
   }
-
-  ngOnInit(): void {}
 }

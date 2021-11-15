@@ -19,7 +19,7 @@
               <p class="mt-1">{{ image.text | wordsTruncature: 70 }}</p>
             </div>
             <app-image-like-button [likes]="image.likeButton"></app-image-like-button>
-            <app-image-comment></app-image-comment>
+            <app-image-comment [comments]="image.comments"></app-image-comment>
           </div>
         </div>
       </div>

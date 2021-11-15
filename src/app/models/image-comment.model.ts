@@ -1,11 +1,13 @@
 import {Model} from "./interfaces/model";
 
 export class ImageCommentModel implements Model {
-  readonly icon: string;
-  readonly count: number;
+  readonly text: string;
+  readonly username: string;
+  readonly datePosted?: Date;
 
   constructor(input: Partial<ImageCommentModel>) {
-    this.icon = input.icon || '';
-    this.count = input.count || 0;
+    this.text = input.text || '';
+    this.username = input.username || '';
+    this.datePosted = input.datePosted || undefined;
   }
 }

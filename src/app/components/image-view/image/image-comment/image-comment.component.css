@@ -14,3 +14,7 @@
 .comment-input::placeholder {
     color: #757575;
 }
+
+.image-comment-username {
+    color: #f44336;
+}
