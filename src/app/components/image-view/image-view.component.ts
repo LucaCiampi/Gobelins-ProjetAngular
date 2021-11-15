@@ -21,8 +21,19 @@ export class ImageViewComponent implements OnInit {
         text: faker.lorem.sentence(12),
         likeButton: new ImageLikeButtonModel({
           icon: 'favorite_border',
-          count: 63,
-          isLiked: true,
+          isLiked: false,
+          maxLikes: 300
+        })
+      }),
+      new ImageModel({
+        profilePhotoUrl: faker.image.imageUrl(40, 40, undefined, true, true),
+        username: faker.internet.userName(),
+        imageUrl: faker.image.imageUrl(320, 320, undefined, true, true),
+        title: faker.lorem.sentence(2),
+        text: faker.lorem.sentence(12),
+        likeButton: new ImageLikeButtonModel({
+          icon: 'favorite_border',
+          isLiked: false,
           maxLikes: 300
         })
       }),
@@ -47,8 +58,7 @@ export class ImageViewComponent implements OnInit {
         text: faker.lorem.sentence(12),
         likeButton: new ImageLikeButtonModel({
           icon: 'favorite_border',
-          count: 63,
-          isLiked: true,
+          isLiked: false,
           maxLikes: 300
         })
       }),
@@ -60,8 +70,7 @@ export class ImageViewComponent implements OnInit {
         text: faker.lorem.sentence(12),
         likeButton: new ImageLikeButtonModel({
           icon: 'favorite_border',
-          count: 63,
-          isLiked: true,
+          isLiked: false,
           maxLikes: 300
         })
       }),
@@ -73,21 +82,7 @@ export class ImageViewComponent implements OnInit {
         text: faker.lorem.sentence(12),
         likeButton: new ImageLikeButtonModel({
           icon: 'favorite_border',
-          count: 63,
-          isLiked: true,
-          maxLikes: 300
-        })
-      }),
-      new ImageModel({
-        profilePhotoUrl: faker.image.imageUrl(40, 40, undefined, true, true),
-        username: faker.internet.userName(),
-        imageUrl: faker.image.imageUrl(320, 320, undefined, true, true),
-        title: faker.lorem.sentence(2),
-        text: faker.lorem.sentence(12),
-        likeButton: new ImageLikeButtonModel({
-          icon: 'favorite_border',
-          count: 63,
-          isLiked: true,
+          isLiked: false,
           maxLikes: 300
         })
       })

@@ -12,23 +12,25 @@ export class ImageLikeButtonComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    if (true === this.likes.isLiked) {
+      this.likes.icon = 'favorite';
+    }
+  }
 
   toggleLike(): void {
     if (!this.likes.isLiked) {
-      // console.log(this.likeBtn)
-      // this.likeBtn.nativeElement.innerHTML = 'favorite'
-      // this.likes.icon = 'favorite';
-      // this.likes.count += 1;
-      // this.likes.likeBtn.color = 'warn';
+      console.log(this.likeBtn)
+      this.likes.icon = 'favorite';
+      this.likes.count += 1;
+      // this.likes.icon.color = 'warn';
     }
     else {
       console.log(this.likeBtn.nativeElement)
-      // this.likeBtn.nativeElement.innerHTML = 'favorite_border';
-      // this.likes.icon = 'favorite_border';
-      // this.likes.count -= 1;
-      // this.likes.likeBtn.color = 'grey';
+      this.likes.icon = 'favorite_border';
+      this.likes.count -= 1;
+      // this.likes.icon.color = 'grey';
     }
-    // this.likes.isLiked = !this.likes.isLiked;
+    this.likes.isLiked = !this.likes.isLiked;
   }
 }
